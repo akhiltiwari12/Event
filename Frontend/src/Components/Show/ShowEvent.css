@@ -1,0 +1,108 @@
+.event-details-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.event-name {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  font-size: 16px;
+  font-style: italic;
+  color: black;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.event-info p {
+  font-size: 15px;
+  color: black;
+  margin: 5px 0;
+}
+
+.event-attendees {
+  margin-top: 20px;
+}
+
+.event-attendees h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.event-attendees ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-attendees li {
+  font-size: 14px;
+  color: #444;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 930px) {
+  .event-details-container {
+    padding: 15px;
+  }
+
+  .event-name {
+    font-size: 20px;
+  }
+
+  .event-description,
+  .event-info p {
+    font-size: 14px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
