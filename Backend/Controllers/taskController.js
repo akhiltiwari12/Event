@@ -49,7 +49,9 @@ export const getAllTask=catchAsyncError(async(req,res,next)=>{
 
 export const deleteTask=catchAsyncError(async(req,res,next) =>{
     const {taskId}=req.params;
-    await Attendee.findOneAndDelete({taskId:taskId});
+    const attendee=await Attendee.find({taskId:taskId});
+    for(let i=0;i<attendee.length;i++)
+        await Attendee.findOneAndDelete({taskId});
     await Task.findByIdAndDelete(taskId);
     if(!mongoose.Types.ObjectId.isValid(taskId))
         return next(new ErrorHandler("Id format is invalid",400));
