@@ -109,7 +109,7 @@ const UpdateEvent= () => {
 
         {/* Submit Button */}
         <button type="submit" className="submit-button">
-          Submit Event
+          Update Event
         </button>
       </form>
     </div>

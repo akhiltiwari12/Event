@@ -41,6 +41,7 @@ const Login = () => {
      setUser(response.data.user);
      navigateTo("/");
     } catch (error) {
+      toast.error(error.response.data.message);
       console.log("chud gye guru",error);
     }
     

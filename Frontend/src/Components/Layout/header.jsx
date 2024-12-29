@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="logo">MyLogo</div>
+      <div className="logo">MyEvent</div>
 
       <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
         <ul>

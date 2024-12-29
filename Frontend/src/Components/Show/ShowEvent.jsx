@@ -48,7 +48,7 @@ const ShowEvent = () => {
         setAttendees(response.data.attendee);
     }
     fetch();
-  },[]);
+  },[attendees]);
 
 
 
@@ -81,6 +81,7 @@ const ShowEvent = () => {
       </div>
       <div className="event-attendees">
         <h3>Attendees:</h3>
+        {attendees.length===0 && <h1>No Attendees Yet!</h1>}
         <ul>
         
           {attendees.map((attendee) => (

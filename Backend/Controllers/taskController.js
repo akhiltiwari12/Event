@@ -3,6 +3,7 @@ import { catchAsyncError } from "../Middleware/catchAsyncError.js";
 import ErrorHandler from "../Middleware/error.js";
 import {Event} from "../models/eventSchema.js"
 import { Task } from "../models/taskSchema.js";
+import { Attendee } from "../models/attendeeSchema.js";
 
 
 export const createTask=catchAsyncError(async(req,res,next)=>{
@@ -48,6 +49,7 @@ export const getAllTask=catchAsyncError(async(req,res,next)=>{
 
 export const deleteTask=catchAsyncError(async(req,res,next) =>{
     const {taskId}=req.params;
+    await Attendee.findOneAndDelete({taskId:taskId});
     await Task.findByIdAndDelete(taskId);
     if(!mongoose.Types.ObjectId.isValid(taskId))
         return next(new ErrorHandler("Id format is invalid",400));
