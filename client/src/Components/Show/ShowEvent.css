@@ -1,0 +1,263 @@
+/* General layout and background */
+.event-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #f0f4f8; /* Lighter background for the entire page */
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif; /* New modern font */
+  padding: 0 10%;
+}
+
+/* Event details container */
+.event-details-container {
+  width: 100%;
+  max-width: 1400px;  /* Maximum width for wider screens */
+  margin: 40px auto;
+  padding: 40px 50px; /* Increased padding */
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border-left: 10px solid #4facfe;
+  border-right: 10px solid #4facfe;
+  background: linear-gradient(135deg, #ffffff 30%, #f7f9fc 90%);
+}
+
+/* Hover effect on event container */
+.event-details-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15), 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Event name (title) */
+.event-name {
+  text-align: center;
+  font-size: 3rem;
+  color: #333333;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 25px;
+  background: linear-gradient(45deg, #00c7b7, #ff6f61);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Event description */
+.event-description {
+  font-size: 1.2rem;
+  color: #555555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: justify;
+  padding: 25px;
+  border-radius: 10px;
+  background: #e9ecef;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-description:hover {
+  transform: translateX(5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Event info (Location & Date) */
+.event-info p {
+  font-size: 1.2rem;
+  color: #4a5568;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  transition: background 0.3s ease, transform 0.3s ease;
+  border: 2px solid #f1f5f9;
+}
+
+.event-info p:hover {
+  background: #fafafa;
+  transform: translateX(5px);
+}
+
+/* Attendees section */
+.event-attendees {
+  margin-top: 40px;
+}
+
+.event-attendees h3 {
+  font-size: 1.7rem;
+  color: #2b6cb0;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.event-attendees h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: #ff6f61;
+}
+
+.event-attendees ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-attendees li {
+  font-size: 1.2rem;
+  color: #333333;
+  padding: 14px 25px;
+  background: #f7fafc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.event-attendees li:hover {
+  background: #e2e8f0;
+  transform: translateX(5px);
+}
+
+/* Button group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* Button styling */
+.edit-button,
+.delete-button {
+  padding: 18px 35px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px; /* Consistent width for buttons */
+  text-align: center;
+}
+
+.edit-button {
+  background: linear-gradient(45deg, #38b2ac, #4fd1c5);
+  color: white;
+}
+
+.delete-button {
+  background: linear-gradient(45deg, #e53e3e, #fc8181);
+  color: white;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.edit-button:active,
+.delete-button:active {
+  transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+  .event-details-container {
+    width: 90%;
+    padding: 35px;
+  }
+
+  .event-name {
+    font-size: 2.8rem;
+  }
+
+  .event-description {
+    font-size: 1.1rem;
+  }
+
+  .event-info p {
+    font-size: 1.1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 100%;
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .event-details-container {
+    width: 95%;
+    padding: 30px;
+  }
+
+  .event-name {
+    font-size: 2.2rem;
+  }
+
+  .event-description {
+    font-size: 1.05rem;
+  }
+
+  .event-info p {
+    font-size: 1.05rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .event-details-container {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .event-name {
+    font-size: 1.8rem;
+  }
+
+  .event-description {
+    font-size: 1rem;
+  }
+
+  .event-info p {
+    font-size: 1rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 100%;
+    padding: 12px 25px;
+  }
+}

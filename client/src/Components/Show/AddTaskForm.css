@@ -1,0 +1,132 @@
+/* General layout for the add task container */
+.add-task-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  background-color: #f7f7f7;
+}
+
+/* Hover effect for the add task container */
+.add-task-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Title styling */
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #00bcd4, #008080);
+  border-radius: 2px;
+}
+
+/* Styling for input groups */
+.input-group {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Label styling */
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #636e72;
+  transition: color 0.3s ease;
+}
+
+/* Input field styling */
+.input-group input {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Focus effect for input field */
+.input-group input:focus {
+  outline: none;
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.1);
+}
+
+/* Hover effect for label */
+.input-group:hover label {
+  color: #2d3436;
+}
+
+/* Submit button styling */
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(145deg, #00bcd4, #008080);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect for the submit button */
+.submit-btn:hover {
+  background: linear-gradient(145deg, #008080, #00bcd4);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+}
+
+/* Active effect for the submit button */
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 930px) {
+  .add-task-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .input-group input {
+    font-size: 0.95rem;
+    padding: 12px 16px;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
